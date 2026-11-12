@@ -1,0 +1,10 @@
+# Fonksiyonlar ve döndür — Nexuslang
+fonksiyon komisyon(tutar, oran):
+    döndür tutar * oran / 100
+
+değişken fiyat = 2499
+değişken kom = komisyon(fiyat, 15)
+yaz("Committee indirimi:", kom)
+
+eğer kom > 300 ve fiyat > 1000:
+    yaz("Büyük indirim onaylandı")
