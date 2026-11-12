@@ -1,14 +1,14 @@
-# Nexuslang v0.1 — Türkçe sözdizimi
+# Nexuslang v0.2 — Türkçe sözdizimi
 fonksiyon selamla(ad):
     yaz("Merhaba, " + ad + "! Nexuslang'e hoş geldin.")
 
 selamla("Toprak")
 
-değişken sayı = 5
-eğer sayı > 3:
-    yaz("sayı 3'ten büyük")
+değişken miktar = 5
+eğer miktar > 3:
+    yaz("miktar 3'ten büyük")
 değilse:
-    yaz("sayı küçük")
+    yaz("miktar küçük")
 
 tekrar 3 kez:
     yaz("Nexuslang: kendi dilinde kodla, Python'a köprü kur.")

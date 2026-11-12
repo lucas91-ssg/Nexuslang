@@ -3,42 +3,45 @@
 **Program in your mother tongue. Bridge to Python.**
 **Kendi ana dilinde programla. Python'a köprü kur.**
 
-Nexuslang is a bridge language: you write code with native-language keywords
-(Turkish in v0.1; Urdu next on the roadmap), and the transpiler emits clean,
-readable Python so learners can cross over to the global ecosystem without
-hitting an English wall first.
-
-Nexuslang bir köprü dildir: kodu kendi ana dilinizin anahtar kelimeleriyle
-yazarsınız (v0.1'de Türkçe; yol haritasında sırada Urduca), ve transpiler
-okunabilir Python üretir — böylece öğrenenler, önce bir İngilizce duvarına
-çarpmadan küresel ekosisteme geçebilir.
-
-## Why / Neden
-250M+ people in Pakistan and millions more worldwide never think in English.
-Nexuslang lets them *think* in their language first, then migrate to
-Python/JavaScript with the concepts already solid. Education, not replacement.
+v0.2: full Turkish programs — while (`olduğu sürece`), for-in (`her X için`),
+elif (`yoksa`), try/except (`dene/yakala`), input (`oku`), types
+(`sayı/metin/ondalık`), booleans (`doğru/yanlış/boş`) and word operators
+(`eşittir, büyüktür, küçüktür, farklı, büyük eşittir, küçük eşittir`).
+The transpiler is string-safe: reserved words inside strings or comments are untouched.
 
 ## Run / Çalıştır (Termux-friendly, no build)
-    python nexuslang.py examples/merhaba.nx        # run
-    python nexuslang.py examples/merhaba.nx --emit # show generated Python
+    python nexuslang.py examples/oyun.nx          # tam Türkçe program (girdi ister)
+    python nexuslang.py examples/merhaba.nx --emit  # göster üretilen Python'u
 
-## Keyword map (v0.1) / Anahtar kelimeler
+## Keyword map v0.2 / Anahtar kelimeler
 | Nexuslang (TR) | Python |
 |---|---|
 | `fonksiyon` | `def` |
 | `döndür` | `return` |
-| `eğer` | `if` |
-| `değilse` | `else` |
-| `ve` / `veya` / `değil` | `and` / `or` / `not` |
-| `yaz` | `print` |
-| `değişken x = 1` | `x = 1` |
+| `eğer / yoksa / değilse` | `if / elif / else` |
+| `ve / veya / değil` | `and / or / not` |
+| `yaz / oku` | `print / input` |
+| `doğru / yanlış / boş` | `True / False / None` |
+| `sayı / metin / ondalık` | `int / str / float` |
+| `aralık / uzunluk` | `range / len` |
 | `tekrar N kez:` | `for _ in range(N):` |
+| `her X için L:` | `for X in L:` |
+| `C olduğu sürece:` | `while C:` |
+| `dene / yakala / sonunda` | `try / except / finally` |
+| `getir m` | `import m` |
+| `değişken x = 1` | `x = 1` |
+| `eşittir / farklı / büyüktür / küçüktür` | `== / != / > / <` |
+
+## Reserved words / Ayrılmış kelimeler
+Do not use as variable names: the left column above (e.g. `sayı` is `int`,
+so name your variable `miktar`, not `sayı`).
 
 ## Status / Durum — honest / dürüst
-v0.1 alpha: indentation-based transpiler, Turkish subset, single-file programs.
-No packages, no classes yet. Roadmap: Urdu syntax, AST tooling, JS target,
-standard library in native keywords, MCP server for AI assistants.
+v0.2 alpha: indentation-based transpiler, single-file programs, no classes yet.
+Roadmap v0.3: `sınıf` + `ben` (classes/self), Turkish stdlib, and **kabuk** —
+a standalone Nexuslang REPL/interpreter (AST + tree-walk, no Python dependency),
+with errors explained in Turkish.
 
 ## Author
 Lucas Guzmán · Buenos Aires · also building NexusShop (Pakistan marketplace)
-MIT License (to be added in v0.2)
+MIT License (to be added in v0.3)

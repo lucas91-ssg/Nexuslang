@@ -1,0 +1,40 @@
+# Nexuslang v0.2 — Tamamen Türkçe, tam bir program
+fonksiyon selamla(ad):
+    yaz("Merhaba " + ad + "! Aklımdan bir sayı tuttum.")
+
+fonksiyon karesi(x):
+    döndür x * x
+
+değişken sayılar = [3, 7, 1, 9, 4]
+değişken en = sayılar[0]
+
+her eleman için sayılar:
+    eğer eleman > en:
+        en = eleman
+
+yaz("Listedeki en büyük sayı:", en)
+
+değişken adım = 0
+adım < 3 olduğu sürece:
+    yaz("Geri sayım:", 3 - adım)
+    adım = adım + 1
+
+eğer karesi(4) eşittir 16:
+    yaz("Fonksiyonlar doğru çalışıyor")
+yoksa en > 100:
+    yaz("Bu imkansız")
+değilse:
+    yaz("Her şey yolunda")
+
+dene:
+    değişken tahmin = sayı(oku("Tahminin nedir? "))
+    eğer tahmin eşittir en:
+        yaz("Bildin! Tebrikler.")
+    değilse:
+        yaz("Bilemedin. Doğru cevap:", en)
+yakala:
+    yaz("Bu bir sayı değil, dostum.")
+
+değişken ad = oku("Adın ne? ")
+selamla(ad)
+yaz("Oyun bitti. Nexuslang ile tamamen Türkçe.")
