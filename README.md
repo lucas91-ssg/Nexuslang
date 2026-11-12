@@ -45,3 +45,8 @@ with errors explained in Turkish.
 ## Author
 Lucas Guzmán · Buenos Aires · also building NexusShop (Pakistan marketplace)
 MIT License (to be added in v0.3)
+
+## Review kit / İnceleme kiti (30 seconds)
+    bash demo.sh                                 # todos los ejemplos + tests en un comando
+    python -m unittest discover -s tests -v      # solo tests
+    python nexuslang.py examples/oyun.nx --emit  # ver el Python generado
